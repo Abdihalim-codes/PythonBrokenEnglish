@@ -6,5 +6,10 @@ Use ```async``` and ```await``` to run tasks concurrently.
 
 Example:
 ```python
-def greet(name: str) -> str:
-    return f"Hello, {name}!"
+import asyncio
+
+async def fetch_data():
+    await asyncio.sleep(1)
+    return "Data fetched"
+
+asyncio.run(fetch_data())
